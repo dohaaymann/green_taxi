@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "220551199244",
+    "project_id": "taxi-407317",
+    "storage_bucket": "taxi-407317.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220551199244:android:0fbfaf68b0fb6057f74c29",
+        "android_client_info": {
+          "package_name": "com.dotcoder.green_taxi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8m3hCn-4H9xh4Z5AF327zdCIYv83a7_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
