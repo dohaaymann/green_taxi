@@ -1,3 +1,4 @@
+//dohagit fsck --full
 import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -31,8 +32,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(textTheme),
       ),
-      home:HomeScreen(),
-      // home: DecisionScreen(),
+      // home:HomeScreen(),
+      home: DecisionScreen(),
     );
   }
 }

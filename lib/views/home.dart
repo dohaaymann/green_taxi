@@ -108,32 +108,32 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () async{
-          Get.to(()=>HomePage());
-          // getUserCurrentLocation().then((value) async {
-          //   print(value.latitude.toString() +" "+value.longitude.toString());
-          //
-          //   // marker added for current users location
-          //   _markers.add(
-          //       Marker(
-          //         markerId: MarkerId("2"),
-          //         position: LatLng(value.latitude, value.longitude),
-          //         infoWindow: InfoWindow(
-          //           title: 'My Current Location',
-          //         ),
-          //       )
-          //   );
-          //
-          //   // specified current users location
-          //   CameraPosition cameraPosition = new CameraPosition(
-          //     target: LatLng(value.latitude, value.longitude),
-          //     zoom: 14,
-          //   );
-          //
-          //   final GoogleMapController controller = await _controller.future;
-          //   controller.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
-          //   setState(() {
-          //   });
-          // });
+          // Get.to(()=>HomePage());
+          getUserCurrentLocation().then((value) async {
+            print(value.latitude.toString() +" "+value.longitude.toString());
+
+            // marker added for current users location
+            _markers.add(
+                Marker(
+                  markerId: MarkerId("2"),
+                  position: LatLng(value.latitude, value.longitude),
+                  infoWindow: InfoWindow(
+                    title: 'My Current Location',
+                  ),
+                )
+            );
+
+            // specified current users location
+            CameraPosition cameraPosition = new CameraPosition(
+              target: LatLng(value.latitude, value.longitude),
+              zoom: 14,
+            );
+
+            final GoogleMapController controller = await _controller.future;
+            controller.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+            setState(() {
+            });
+          });
         },
         child: Icon(Icons.local_activity),
       ),

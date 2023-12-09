@@ -126,17 +126,17 @@ class _ProfileSettingScreenState extends State<ProfileSettingScreen> {
                           return null;
 
                     },onTap: ()async{
-                          Get.to(()=>HomePage());
-                      // Prediction? p = await  authController.showGoogleAutoComplete(context);
-                      // if (p != null && p.description != null) {
-                      //   homeAddress = await authController.buildLatLngFromAddress(p.description!);
-                      //   homeController.text = p.description!;
-                      // }
-                      // /// now let's translate this selected address and convert it to latlng obj
-                      // else {
-                      //   // Handle the case where either p or p.description is null
-                      //   print('----------------------------Prediction or description is null');
-                      // }
+                          // Get.to(()=>HomePage());
+                      Prediction? p = await  authController.showGoogleAutoComplete(context);
+                      if (p != null && p.description != null) {
+                        homeAddress = await authController.buildLatLngFromAddress(p.description!);
+                        homeController.text = p.description!;
+                      }
+                      /// now let's translate this selected address and convert it to latlng obj
+                      else {
+                        // Handle the case where either p or p.description is null
+                        print('----------------------------Prediction or description is null');
+                      }
                       // /store this information into firebase together once update is clicked
 
 

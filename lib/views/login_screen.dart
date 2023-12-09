@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fl_country_code_picker/fl_country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:green_taxi/views/driver/register.dart';
+import 'package:green_taxi/views/register.dart';
 import 'package:green_taxi/views/otp_verification_screen.dart';
 import 'package:green_taxi/views/profile_settings.dart';
 import 'package:fl_country_code_picker/fl_country_code_picker.dart';
@@ -230,15 +230,20 @@ class _LoginScreenState extends State<LoginScreen> {
 
                     )),
               ),),
-            Align(alignment: Alignment.centerRight,child: TextButton(onPressed: (){
-              // Navigator.of(context).pushNamed("forget");
-              // Navigator.of(context).pushNamed("f_pass");
-              // print(FirebaseAuth.instance.currentUser);
-              // Get.offAll(() => HomeScreen());
-              Get.offAll(() => register());
-              // Get.offAll(() => ProfileSettingScreen());
-              // Get.offAll(() => DriverProfileSetup());
-            },child: Text("forgot Password?"),),),
+            Row(mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Don't have an account?"),
+                Align(child: TextButton(onPressed: (){
+                  // Navigator.of(context).pushNamed("forget");
+                  // Navigator.of(context).pushNamed("f_pass");
+                  // print(FirebaseAuth.instance.currentUser);
+                  // Get.offAll(() => HomeScreen());
+                  Get.offAll(() => register());
+                  // Get.offAll(() => ProfileSettingScreen());
+                  // Get.offAll(() => DriverProfileSetup());
+                },child: Text("SignUp"),),),
+              ],
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(onPressed:login, child:Text("Login",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.white),),style:
